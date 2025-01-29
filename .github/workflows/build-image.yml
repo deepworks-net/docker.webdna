@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'centos*-fcgi-*-*'
+      - 'alpine*-fcgi-*-*'
 
 jobs:
   build_image:
