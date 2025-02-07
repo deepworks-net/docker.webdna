@@ -77,7 +77,7 @@ services:
         DNA_EXECUTABLE: "WebDNA-Alpine-FastCGI-8.6.5"
   # CentOS 7 FCGI 8.6.5
   centos7-fcgi-865:
-    image: deepworks/webdna:centos7-fcgi-8.6.5
+    image: deepworks/webdna:centos7-fcgi-865
     extends:
       service: base-vol
     build:
