@@ -5,6 +5,7 @@ on:
     tags:
       - 'centos*-fcgi-*-*'
       - 'alpine*-fcgi-*-*'
+      - 'almalinux*-fcgi-*-*'
 
 jobs:
   build_image:

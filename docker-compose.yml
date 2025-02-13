@@ -16,39 +16,40 @@ services:
       - type: bind
         source: ./public
         target: /var/www/html/public
-  # AlmaLinux 8.5 FCGI 8.6.5
-  almalinux85-fcgi-865:
-    image: deepworks/webdna:almalinux85-fcgi-8.6.5
+  # AlmaLinux 8 FCGI 8.6.5
+  almalinux8-fcgi-865:
+    image: deepworks/webdna:almalinux8-fcgi-865-1.0.0
     extends:
       service: base-vol
     build:
-      dockerfile: almalinux/almalinux85.Dockerfile
+      dockerfile: almalinux/almalinux8.Dockerfile
       args:
         DNA_EXECUTABLE: "WebDNA-Linux-FastCGI-8.6.5"
-  # AlmaLinux 8.5 FCGI 8.6.4
-  almalinux85-fcgi-864:
-    image: deepworks/webdna:almalinux85-fcgi-8.6.4
+  # AlmaLinux 8 FCGI 8.6.4
+  almalinux8-fcgi-864:
+    image: deepworks/webdna:almalinux8-fcgi-864
     extends:
-      service: almalinux85-fcgi-865
+      service: almalinux8-fcgi-865
     build:
       args:
         DNA_EXECUTABLE: "WebDNA-Linux-FastCGI-8.6.4"
-  # AlmaLinux 8.5 FCGI 8.6.3
-  almalinux85-fcgi-863:
-    image: deepworks/webdna:almalinux85-fcgi-8.6.3
+  # AlmaLinux 8 FCGI 8.6.3
+  almalinux8-fcgi-863:
+    image: deepworks/webdna:almalinux8-fcgi-863
     extends:
-      service: almalinux85-fcgi-865
+      service: almalinux8-fcgi-865
     build:
       args:
         DNA_EXECUTABLE: "WebDNA-Linux-FastCGI-8.6.3"
-  # AlmaLinux 8.5 FCGI 8.6.1
-  almalinux85-fcgi-861:
-    image: deepworks/webdna:almalinux85-fcgi-8.6.1
+  # AlmaLinux 8 FCGI 8.6.1
+  almalinux8-fcgi-861:
+    image: deepworks/webdna:almalinux8-fcgi-861
     extends:
-      service: almalinux85-fcgi-865
+      service: almalinux8-fcgi-865
     build:
       args:
         DNA_EXECUTABLE: "WebDNA-Linux-FastCGI-8.6.1"
+
   # Alpine 3.12 FCGI 8.6.5
   alpine312-fcgi-865:
     image: deepworks/webdna:alpine312-fcgi-8.6.5
